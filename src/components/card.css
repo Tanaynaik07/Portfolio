@@ -1,0 +1,11 @@
+#card{
+    display: flex;
+    padding: 3rem 3rem;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+
+#front,#back{
+    position: absolute;
+}
