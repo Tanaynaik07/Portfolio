@@ -1,0 +1,247 @@
+main {
+    background: #5e0084;
+    overflow-y: hidden;
+}
+
+#prof_title:after {
+    content: "";
+    animation: spin 4s linear infinite;
+}
+
+
+#intro {
+    min-height: fit-content;
+    display: flex;
+    flex: 1;
+    justify-content: start;
+    padding-top: 10rem;
+    padding-left: 25%;
+    margin-bottom: 10%;
+    gap: 4rem;
+}
+
+#intro img {
+    width: 20%;
+    height: 30rem;
+}
+
+#intro #text {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    flex: 1;
+    color: white;
+}
+
+#intro h1,
+#intro p {
+    margin: 0;
+}
+
+#aboutme,
+#education,
+#projects,
+#contact,
+#skills,
+#extra {
+    flex-direction: column;
+    display: flex;
+    padding: 0 10rem;
+    margin: 10rem 0;
+    color: white;
+    opacity: 0.8;
+}
+
+#aboutme {
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    /* Ensure it's behind the cover */
+}
+
+.cover {
+    width: 80%;
+    position: absolute;
+    background-color: #5e0084;
+    z-index: 1;
+}
+
+.coveraboutme {
+    animation: coverAbout 2s cubic-bezier(0, 0.5, 0, 1) 2.5s forwards;
+    min-height: 50vh;
+    z-index: 1;
+}
+
+.coverheader {
+    background-color: gold;
+    animation: magicLine 2s linear, disappear 2s cubic-bezier(0, 0, 1, 1) 2s forwards;
+    /* Add a delay of 10 seconds before starting the disappear animation */
+    height: 4px;
+    position: absolute;
+}
+
+.aboutheader {
+    z-index: 2;
+}
+
+@keyframes coverAbout {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(50vh);
+    }
+}
+
+@keyframes magicLine {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+
+        width: 80%;
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.comesvisible {
+    animation: comesvisible 1s linear;
+}
+
+
+@keyframes comesvisible {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@keyframes spin {
+    0% {
+        content: "Web Developer";
+
+    }
+
+    33% {
+        content: "AI Developer";
+
+    }
+
+    66% {
+        content: "Data Analyst";
+
+    }
+
+    100% {
+        content: "Web Developer";
+
+    }
+}
+
+
+#education {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.covereducation {
+    animation: coverEducation 2s cubic-bezier(0, 0.5, 0, 1) 2.5s forwards;
+    min-height: 80vh;
+    z-index: 1;
+}
+
+.educationheader {
+    z-index: 2;
+}
+
+@keyframes coverEducation {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(80vh);
+    }
+}
+
+
+
+
+#skills {
+    position: relative;
+    z-index: 4;
+}
+
+.coverskills {
+    animation: coverSkills 2s cubic-bezier(0, 0.5, 0, 1) 2.5s forwards;
+    min-height: 50vh;
+    z-index: 1;
+}
+
+.skillsheader {
+    z-index: 2;
+}
+
+@keyframes coverSkills {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(50vh);
+    }
+}
+
+
+#projects {
+    position: relative;
+    z-index: 4;
+}
+
+.coverprojects {
+    animation: coverProjects 2s cubic-bezier(0, 0.5, 0, 1) 2.5s forwards;
+    min-height: 77vh;
+    z-index: 1;
+}
+
+.projectsheader {
+    z-index: 2;
+}
+
+@keyframes coverProjects {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(77vh);
+    }
+}
+
+
+#contact,
+#extra {
+    position: relative;
+    z-index: 5;
+}
