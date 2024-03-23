@@ -1,7 +1,12 @@
 main {
     background: #5e0084;
+    overflow-y: hidden;
 }
 
+#prof_title:after {
+    content: "";
+    animation: spin 4s linear infinite;
+}
 
 
 #intro {
@@ -42,8 +47,9 @@ main {
     flex-direction: column;
     display: flex;
     padding: 0 10rem;
-    margin: 5rem 0;
+    margin: 10rem 0;
     color: white;
+    opacity: 0.8;
 }
 
 #aboutme {
@@ -53,34 +59,32 @@ main {
     /* Ensure it's behind the cover */
 }
 
-.coveraboutme {
-    animation: coverAnimate 2s cubic-bezier(0, 0.5, 0, 1) 2.5s;
+.cover {
     width: 80%;
     position: absolute;
     background-color: #5e0084;
-    min-height: 50vh;
     z-index: 1;
-
 }
 
-.coveraboutme{
+.coveraboutme {
+    animation: coverAbout 2s cubic-bezier(0, 0.5, 0, 1) 2.5s forwards;
     min-height: 50vh;
     z-index: 1;
 }
 
 .coverheader {
     background-color: gold;
-    animation: magicLine 2s linear;
+    animation: magicLine 2s linear, disappear 2s cubic-bezier(0, 0, 1, 1) 2s forwards;
     /* Add a delay of 10 seconds before starting the disappear animation */
     height: 4px;
     position: absolute;
 }
 
-.aboutheader{
+.aboutheader {
     z-index: 2;
 }
 
-@keyframes coverAnimate {
+@keyframes coverAbout {
     0% {
         opacity: 1;
         transform: translateY(0);
@@ -108,14 +112,25 @@ main {
     }
 
     100% {
+        opacity: 0;
+    }
+}
+
+.comesvisible {
+    animation: comesvisible 1s linear;
+}
+
+
+@keyframes comesvisible {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
         opacity: 1;
     }
 }
 
-#prof_title:after {
-    content: "";
-    animation: spin 4s linear infinite;
-}
 
 @keyframes spin {
     0% {
@@ -137,4 +152,96 @@ main {
         content: "Web Developer";
 
     }
+}
+
+
+#education {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.covereducation {
+    animation: coverEducation 2s cubic-bezier(0, 0.5, 0, 1) 2.5s forwards;
+    min-height: 80vh;
+    z-index: 1;
+}
+
+.educationheader {
+    z-index: 2;
+}
+
+@keyframes coverEducation {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(80vh);
+    }
+}
+
+
+
+
+#skills {
+    position: relative;
+    z-index: 4;
+}
+
+.coverskills {
+    animation: coverSkills 2s cubic-bezier(0, 0.5, 0, 1) 2.5s forwards;
+    min-height: 50vh;
+    z-index: 1;
+}
+
+.skillsheader {
+    z-index: 2;
+}
+
+@keyframes coverSkills {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(50vh);
+    }
+}
+
+
+#projects {
+    position: relative;
+    z-index: 4;
+}
+
+.coverprojects {
+    animation: coverProjects 2s cubic-bezier(0, 0.5, 0, 1) 2.5s forwards;
+    min-height: 77vh;
+    z-index: 1;
+}
+
+.projectsheader {
+    z-index: 2;
+}
+
+@keyframes coverProjects {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(77vh);
+    }
+}
+
+
+#contact,
+#extra {
+    position: relative;
+    z-index: 5;
 }
