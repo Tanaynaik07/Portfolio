@@ -1,7 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import "../src/landing.css";
-import sampleImg from "../src/assest/image 7.png";
+import sampleImg from "../src/assest/profile.png";
 import Card from "./components/Card";
+import Tiptool from "./components/Tiptool";
+import Skills from "./components/Skills";
+ 
 
 const Landing = () => {
     let lorem =
@@ -107,10 +110,18 @@ const Landing = () => {
         };
     }, []);
 
+    
+
+
+    
+
     return (
         <main>
             <div id="intro" ref={introRef}>
+                <div id="profilecover">
+
                 <img src={sampleImg} alt="Profile Img"></img>
+                </div>
                 <div id="text">
                     <p>I am</p>
                     <br></br>
@@ -142,18 +153,18 @@ const Landing = () => {
                     <div className="education-entry">
                         <h3>Bachelor of Science in Computer Science</h3>
                         <p>
-                            <strong>University:</strong> ABC University
+                            <strong>University:</strong> Vellore institute of technology
                         </p>
                         <p>
-                            <strong>Location:</strong> City, State
+                            <strong>Location:</strong> Vellore, Tamil Nadu
                         </p>
                         <p>
                             <strong>Dates:</strong> September
-                            2019 - May 2023
+                            2022 -  2026
                         </p>
-                        <p>
+                        {/* <p>
                             <strong>GPA:</strong> 3.8/4.0
-                        </p>
+                        </p> */}
                         <p>
                             <strong>Relevant Coursework:</strong> Algorithms and Data
                             Structures, Database Management Systems, Software Engineering,
@@ -192,21 +203,7 @@ const Landing = () => {
                 <div className="invisible">
 
 
-                    <h2>Skills</h2>
-                    <ul>
-                        <li>Programming Languages: Java, Python, C++</li>
-                        <li>Web Development: HTML, CSS, JavaScript</li>
-                        <li>Frameworks/Libraries: React.js, Node.js, Django</li>
-                        <li>Database Management: SQL, MongoDB</li>
-                        <li>Version Control: Git</li>
-                        <li>Software Development Tools: Visual Studio Code, IntelliJ IDEA</li>
-                        <li>Operating Systems: Windows, Linux</li>
-                        <li>Problem Solving: Data Structures, Algorithms</li>
-                        <li>Networking: TCP/IP, OSI Model</li>
-                        <li>Machine Learning: TensorFlow, Scikit-learn</li>
-                        <li>Cloud Computing: AWS, Azure</li>
-                        <li>Agile Methodologies: Scrum, Kanban</li>
-                    </ul>
+                    <Skills />
                 </div>
             </div>
 
@@ -231,6 +228,8 @@ const Landing = () => {
             <div id="extra" ref={extraRef}>
                 <h1>Extra info</h1>
             </div>
+
+            <Tiptool/>
         </main>
     );
 };
