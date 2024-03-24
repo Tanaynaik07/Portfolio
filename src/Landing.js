@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import "../src/landing.css";
 import sampleImg from "../src/assest/profile.png";
+import samplebg from "../src/assest/background.jpeg";
 import Card from "./components/Card";
 import Tiptool from "./components/Tiptool";
 import Skills from "./components/Skills";
- 
+
 
 const Landing = () => {
     let lorem =
@@ -38,7 +39,7 @@ const Landing = () => {
                         case "aboutme":
                             divs = entry.target.querySelectorAll('div');
                             console.log(divs);
-                            divs[0].classList.add("coveraboutme","coverborder");
+                            divs[0].classList.add("coveraboutme", "coverborder");
                             divs[1].classList.add("coverheader", "aboutheader");
                             divs[2].classList.remove("invisible");
                             break;
@@ -55,14 +56,18 @@ const Landing = () => {
                             divs[0].classList.add("coverskills");
                             divs[1].classList.add("coverheader", "aboutheader");
                             divs[2].classList.remove("invisible");
+
                             break;
                         case "projects":
+                            console.log("Projects section is visible");
                             divs = entry.target.querySelectorAll('div');
-
                             divs[0].classList.add("coverprojects");
                             divs[1].classList.add("coverheader", "aboutheader");
-                            divs[2].classList.remove("invisible");
+                            divs[2].classList.remove("invisible"); // Remove the invisible class from the outer div
+                            
                             break;
+
+
                         // case "contact":
                         //     divs = entry.target.querySelectorAll('div');
 
@@ -110,17 +115,17 @@ const Landing = () => {
         };
     }, []);
 
-    
 
 
-    
+
+
 
     return (
         <main>
             <div id="intro" ref={introRef}>
                 <div id="profilecover">
 
-                <img src={sampleImg} alt="Profile Img"></img>
+                    <img src={sampleImg} alt="Profile Img"></img>
                 </div>
                 <div id="text">
                     <p>I am</p>
@@ -213,11 +218,34 @@ const Landing = () => {
                 <div className="invisible">
 
                     <h1>Project</h1>
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
+                    <div className="cards">
+
+                        <h1>Html Css and Js</h1>
+                        <div id="html">
+
+                            <Card className="cardsItem" backImg={samplebg} />
+                            <Card className="cardsItem" backImg={samplebg} />
+                            <Card className="cardsItem" backImg={samplebg} />
+                            
+                        </div>
+
+                         {/* <h1>React js</h1>
+                        <div id="react">
+
+                            <Card className="cardsItem" backImg={samplebg} />
+                            <Card className="cardsItem" backImg={samplebg} />
+                            <Card className="cardsItem" backImg={samplebg} />
+                          
+                        </div>
+
+                        <h1>Next js</h1>
+                        <div id="next">
+
+                            <Card className="cardsItem" backImg={samplebg} />
+                            <Card className="cardsItem" backImg={samplebg} />
+                            <Card className="cardsItem" backImg={samplebg} />
+                        </div>  */}
+                    </div>
                 </div>
             </div>
 
@@ -229,7 +257,7 @@ const Landing = () => {
                 <h1>Extra info</h1>
             </div>
 
-            <Tiptool/>
+            <Tiptool />
         </main>
     );
 };

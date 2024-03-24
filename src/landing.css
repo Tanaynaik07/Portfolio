@@ -118,8 +118,7 @@ main {
     }
 
     100% {
-
-        width: 80%;
+        width: 78vw;
     }
 }
 
@@ -271,4 +270,16 @@ main {
 #extra {
     position: relative;
     z-index: 5;
+}
+
+
+
+
+#html,#react,#next{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 rows with equal height */
+    grid-auto-rows: auto;
+    grid-gap: 30% 10%; /* Adjust the gap between grid items */
+    z-index: 3;
+    margin-bottom: 15rem;
 }
