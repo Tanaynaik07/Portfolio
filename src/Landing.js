@@ -35,30 +35,30 @@ const Landing = () => {
                         case "aboutme":
                             divs = entry.target.querySelectorAll('div');
                             console.log(divs);
-                            divs[0].classList.add("coveraboutme");
+                            divs[0].classList.add("coveraboutme","coverborder");
                             divs[1].classList.add("coverheader", "aboutheader");
-                            divs[2].classList.add("comesvisible");
+                            divs[2].classList.remove("invisible");
                             break;
                         case "education":
                             divs = entry.target.querySelectorAll('div');
 
                             divs[0].classList.add("covereducation");
                             divs[1].classList.add("coverheader", "aboutheader");
-                            divs[2].classList.add("comesvisible");
+                            divs[2].classList.remove("invisible");
                             break;
                         case "skills":
                             divs = entry.target.querySelectorAll('div');
 
                             divs[0].classList.add("coverskills");
                             divs[1].classList.add("coverheader", "aboutheader");
-                            divs[2].classList.add("comesvisible");
+                            divs[2].classList.remove("invisible");
                             break;
                         case "projects":
                             divs = entry.target.querySelectorAll('div');
 
                             divs[0].classList.add("coverprojects");
                             divs[1].classList.add("coverheader", "aboutheader");
-                            divs[2].classList.add("comesvisible");
+                            divs[2].classList.remove("invisible");
                             break;
                         // case "contact":
                         //     divs = entry.target.querySelectorAll('div');
@@ -125,7 +125,7 @@ const Landing = () => {
             <div id="aboutme" ref={aboutMeRef}>
                 <div className="cover"></div>
                 <div className=" "></div>
-                <div id="aboutcontent">
+                <div id="aboutcontent" className="invisible">
 
                     <h1>About me</h1>
                     {aboutMe}
@@ -135,57 +135,61 @@ const Landing = () => {
             <div id="education" ref={educationRef}>
                 <div className="cover "></div>
                 <div className=""></div>
-                <h2>Education</h2>
-                <div className="education-entry">
-                    <h3>Bachelor of Science in Computer Science</h3>
-                    <p>
-                        <strong>University:</strong> ABC University
-                    </p>
-                    <p>
-                        <strong>Location:</strong> City, State
-                    </p>
-                    <p>
-                        <strong>Dates:</strong> September
-                        2019 - May 2023
-                    </p>
-                    <p>
-                        <strong>GPA:</strong> 3.8/4.0
-                    </p>
-                    <p>
-                        <strong>Relevant Coursework:</strong> Algorithms and Data
-                        Structures, Database Management Systems, Software Engineering,
-                        Computer Networks
-                    </p>
-                    <p>
-                        <strong>Thesis:</strong> "Analysis of Machine Learning Algorithms
-                        for Sentiment Analysis"
-                    </p>
-                </div>
-                <div className="education-entry">
-                    <h3>High School Diploma</h3>
-                    <p>
-                        <strong>School:</strong> XYZ High School
-                    </p>
-                    <p>
-                        <strong>Location:</strong> City, State
-                    </p>
-                    <p>
-                        <strong>Dates:</strong> September 2015 - May 2019
-                    </p>
-                    <p>
-                        <strong>GPA:</strong> 4.0/4.0
-                    </p>
-                    <p>
-                        <strong>Activities:</strong> President of Computer Science Club,
-                        Science Fair Participant
-                    </p>
+                <div className="invisible">
+
+
+                    <h2>Education</h2>
+                    <div className="education-entry">
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <p>
+                            <strong>University:</strong> ABC University
+                        </p>
+                        <p>
+                            <strong>Location:</strong> City, State
+                        </p>
+                        <p>
+                            <strong>Dates:</strong> September
+                            2019 - May 2023
+                        </p>
+                        <p>
+                            <strong>GPA:</strong> 3.8/4.0
+                        </p>
+                        <p>
+                            <strong>Relevant Coursework:</strong> Algorithms and Data
+                            Structures, Database Management Systems, Software Engineering,
+                            Computer Networks
+                        </p>
+                        <p>
+                            <strong>Thesis:</strong> "Analysis of Machine Learning Algorithms
+                            for Sentiment Analysis"
+                        </p>
+                    </div>
+                    <div className="education-entry">
+                        <h3>High School Diploma</h3>
+                        <p>
+                            <strong>School:</strong> XYZ High School
+                        </p>
+                        <p>
+                            <strong>Location:</strong> City, State
+                        </p>
+                        <p>
+                            <strong>Dates:</strong> September 2015 - May 2019
+                        </p>
+                        <p>
+                            <strong>GPA:</strong> 4.0/4.0
+                        </p>
+                        <p>
+                            <strong>Activities:</strong> President of Computer Science Club,
+                            Science Fair Participant
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <div id="skills" ref={skillsRef}>
                 <div className="cover "></div>
                 <div className=""></div>
-                <div>
+                <div className="invisible">
 
 
                     <h2>Skills</h2>
@@ -209,14 +213,14 @@ const Landing = () => {
             <div id="projects" ref={projectsRef}>
                 <div className="cover "></div>
                 <div className=""></div>
-                <div>
+                <div className="invisible">
 
-                <h1>Project</h1>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                    <h1>Project</h1>
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
                 </div>
             </div>
 
