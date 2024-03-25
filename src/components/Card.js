@@ -5,14 +5,14 @@ const Card = (props) => {
     return (
         <div id="holder">
             <div class="card">
-                <div class="card-img"></div>
+                <img class="card-img" src={props.backImg}></img>
                 <div class="card-info">
-                    <p class="text-title">Card title</p>
-                    <p class="text-body">Lorem Ipsum dolor sit amet</p>
-                    <button class="card-button">Read More</button>
+                    <p class="text-title"></p>
+                    <p class="text-body">{props.tools}</p>
+                    <button class="card-button">Check it out</button>
                 </div>
             </div>
-            <h2>Title</h2>
+            <h2>{props.title}</h2>
         </div>
     );
 };
