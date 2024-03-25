@@ -1,10 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../src/landing.css";
 import sampleImg from "../src/assest/profile.png";
+import samplebg from "../src/assest/background.jpeg";
+import legal from "../src/assest/legal.jpeg";
+import vortex from "../src/assest/Vortex_360_logo.png";
+import shoe from "../src/assest/shoe.jpg";
 import Card from "./components/Card";
 import Tiptool from "./components/Tiptool";
 import Skills from "./components/Skills";
- 
+import ProjectLayover from "../src/components/PorjectLayover"; // Import the ProjectLayover component
 
 const Landing = () => {
     let lorem =
@@ -19,6 +23,8 @@ const Landing = () => {
     const projectsRef = useRef(null);
     const contactRef = useRef(null);
     const extraRef = useRef(null);
+
+    const [showProjectLayover, setShowProjectLayover] = useState(false); // State to control the visibility of the ProjectLayover
 
     useEffect(() => {
         // Callback function to handle intersection changes
@@ -38,7 +44,7 @@ const Landing = () => {
                         case "aboutme":
                             divs = entry.target.querySelectorAll('div');
                             console.log(divs);
-                            divs[0].classList.add("coveraboutme","coverborder");
+                            divs[0].classList.add("coveraboutme", "coverborder");
                             divs[1].classList.add("coverheader", "aboutheader");
                             divs[2].classList.remove("invisible");
                             break;
@@ -55,28 +61,17 @@ const Landing = () => {
                             divs[0].classList.add("coverskills");
                             divs[1].classList.add("coverheader", "aboutheader");
                             divs[2].classList.remove("invisible");
+
                             break;
                         case "projects":
+                            console.log("Projects section is visible");
                             divs = entry.target.querySelectorAll('div');
-
                             divs[0].classList.add("coverprojects");
                             divs[1].classList.add("coverheader", "aboutheader");
-                            divs[2].classList.remove("invisible");
+                            divs[2].classList.remove("invisible"); // Remove the invisible class from the outer div
+                            
                             break;
-                        // case "contact":
-                        //     divs = entry.target.querySelectorAll('div');
 
-                        //     divs[0].classList.add("covercontact");
-                        //     divs[1].classList.add("coverheader", "aboutheader");
-                        //     divs[2].classList.add("comesvisible");
-                        //     break;
-                        // case "extra":
-                        //     divs = entry.target.querySelectorAll('div');
-
-                        //     divs[0].classList.add("coveraboutme");
-                        //     divs[1].classList.add("coverheader", "aboutheader");
-                        //     divs[2].classList.add("comesvisible");
-                        //     break;
                         default:
                             break;
                     }
@@ -110,34 +105,42 @@ const Landing = () => {
         };
     }, []);
 
-    
+    // Function to toggle the visibility of ProjectLayover
+    const toggleProjectLayover = () => {
+        setShowProjectLayover(!showProjectLayover);
+        document.body.style.overflow = showProjectLayover ? 'auto' : 'hidden'; // Toggle body overflow
+    };
 
-
-    
-
+    useEffect(() => {
+        if (showProjectLayover) {
+            document.body.style.overflow = 'hidden'; // Hide scrolling when ProjectLayover is shown
+        } else {
+            document.body.style.overflow = 'auto'; // Enable scrolling when ProjectLayover is hidden
+        }
+    }, [showProjectLayover]);
     return (
-        <main>
+        <>
+        <main style={{ overflow: showProjectLayover ? 'hidden' : 'auto' }}>
             <div id="intro" ref={introRef}>
                 <div id="profilecover">
-
-                <img src={sampleImg} alt="Profile Img"></img>
+                    <img src={sampleImg} alt="Profile Img" />
                 </div>
                 <div id="text">
                     <p>I am</p>
-                    <br></br>
+                    <br />
                     <h1>Tanay Naik</h1>
-                    <br></br>
+                    <br />
                     <p>& I am</p>
-                    <br></br>
+                    <br />
                     <h1 id="prof_title"></h1>
                 </div>
             </div>
 
+           
             <div id="aboutme" ref={aboutMeRef}>
                 <div className="cover"></div>
                 <div className=" "></div>
                 <div id="aboutcontent" className="invisible">
-
                     <h1>About me</h1>
                     {aboutMe}
                 </div>
@@ -147,52 +150,9 @@ const Landing = () => {
                 <div className="cover "></div>
                 <div className=""></div>
                 <div className="invisible">
-
-
                     <h2>Education</h2>
                     <div className="education-entry">
-                        <h3>Bachelor of Science in Computer Science</h3>
-                        <p>
-                            <strong>University:</strong> Vellore institute of technology
-                        </p>
-                        <p>
-                            <strong>Location:</strong> Vellore, Tamil Nadu
-                        </p>
-                        <p>
-                            <strong>Dates:</strong> September
-                            2022 -  2026
-                        </p>
-                        {/* <p>
-                            <strong>GPA:</strong> 3.8/4.0
-                        </p> */}
-                        <p>
-                            <strong>Relevant Coursework:</strong> Algorithms and Data
-                            Structures, Database Management Systems, Software Engineering,
-                            Computer Networks
-                        </p>
-                        <p>
-                            <strong>Thesis:</strong> "Analysis of Machine Learning Algorithms
-                            for Sentiment Analysis"
-                        </p>
-                    </div>
-                    <div className="education-entry">
-                        <h3>High School Diploma</h3>
-                        <p>
-                            <strong>School:</strong> XYZ High School
-                        </p>
-                        <p>
-                            <strong>Location:</strong> City, State
-                        </p>
-                        <p>
-                            <strong>Dates:</strong> September 2015 - May 2019
-                        </p>
-                        <p>
-                            <strong>GPA:</strong> 4.0/4.0
-                        </p>
-                        <p>
-                            <strong>Activities:</strong> President of Computer Science Club,
-                            Science Fair Participant
-                        </p>
+                        {/* Education content */}
                     </div>
                 </div>
             </div>
@@ -201,8 +161,6 @@ const Landing = () => {
                 <div className="cover "></div>
                 <div className=""></div>
                 <div className="invisible">
-
-
                     <Skills />
                 </div>
             </div>
@@ -211,13 +169,19 @@ const Landing = () => {
                 <div className="cover "></div>
                 <div className=""></div>
                 <div className="invisible">
+                    <h1>Projects</h1>
+                    <div className="cards">
+                    
+                        <div id="html">
 
-                    <h1>Project</h1>
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
+                            <Card className="cardsItem" backImg={legal} title="Legally" tools="Next.js" />
+                            <Card className="cardsItem" backImg={vortex} title="Vortex 360" tools="React.js" />
+                            <Card className="cardsItem" backImg={shoe} title="E-Store" tools="Vanilla js" />
+                            
+                        </div>
+                        
+                        <h3 onClick={toggleProjectLayover}>More...</h3>
+                    </div>
                 </div>
             </div>
 
@@ -229,8 +193,10 @@ const Landing = () => {
                 <h1>Extra info</h1>
             </div>
 
-            <Tiptool/>
+            <Tiptool />
         </main>
+            {showProjectLayover && <ProjectLayover onClose={toggleProjectLayover} />} {/* Render ProjectLayover conditionally */}
+            </>
     );
 };
 
