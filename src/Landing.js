@@ -9,6 +9,7 @@ import Card from "./components/Card";
 import Tiptool from "./components/Tiptool";
 import Skills from "./components/Skills";
 import ProjectLayover from "../src/components/PorjectLayover"; // Import the ProjectLayover component
+import Contact from "./components/Contact";
 
 const Landing = () => {
     let lorem =
@@ -69,8 +70,13 @@ const Landing = () => {
                             divs[0].classList.add("coverprojects");
                             divs[1].classList.add("coverheader", "aboutheader");
                             divs[2].classList.remove("invisible"); // Remove the invisible class from the outer div
-                            
+
                             break;
+
+                        case "contact":
+                            console.log("Projects section is visible");
+                            divs[0].classList.add("coverprojects");
+                            divs[1].classList.add("coverheader", "aboutheader");
 
                         default:
                             break;
@@ -120,83 +126,124 @@ const Landing = () => {
     }, [showProjectLayover]);
     return (
         <>
-        <main style={{ overflow: showProjectLayover ? 'hidden' : 'auto' }}>
-            <div id="intro" ref={introRef}>
-                <div id="profilecover">
-                    <img src={sampleImg} alt="Profile Img" />
-                </div>
-                <div id="text">
-                    <p>I am</p>
-                    <br />
-                    <h1>Tanay Naik</h1>
-                    <br />
-                    <p>& I am</p>
-                    <br />
-                    <h1 id="prof_title"></h1>
-                </div>
-            </div>
-
-           
-            <div id="aboutme" ref={aboutMeRef}>
-                <div className="cover"></div>
-                <div className=" "></div>
-                <div id="aboutcontent" className="invisible">
-                    <h1>About me</h1>
-                    {aboutMe}
-                </div>
-            </div>
-
-            <div id="education" ref={educationRef}>
-                <div className="cover "></div>
-                <div className=""></div>
-                <div className="invisible">
-                    <h2>Education</h2>
-                    <div className="education-entry">
-                        {/* Education content */}
+            <main style={{ overflow: showProjectLayover ? 'hidden' : 'auto' }}>
+                <div id="intro" ref={introRef}>
+                    <div id="profilecover">
+                        <img src={sampleImg} alt="Profile Img" />
+                    </div>
+                    <div id="text">
+                        <p>I am</p>
+                        <br />
+                        <h1>Tanay Naik</h1>
+                        <br />
+                        <p>& I am</p>
+                        <br />
+                        <h1 id="prof_title"></h1>
                     </div>
                 </div>
-            </div>
 
-            <div id="skills" ref={skillsRef}>
-                <div className="cover "></div>
-                <div className=""></div>
-                <div className="invisible">
-                    <Skills />
+
+                <div id="aboutme" ref={aboutMeRef}>
+                    <div className="cover"></div>
+                    <div className=" "></div>
+                    <div id="aboutcontent" className="invisible">
+                        <h1>About me</h1>
+                        {aboutMe}
+                    </div>
                 </div>
-            </div>
 
-            <div id="projects" ref={projectsRef}>
-                <div className="cover "></div>
-                <div className=""></div>
-                <div className="invisible">
-                    <h1>Projects</h1>
-                    <div className="cards">
-                    
-                        <div id="html">
-
-                            <Card className="cardsItem" backImg={legal} title="Legally" tools="Next.js" />
-                            <Card className="cardsItem" backImg={vortex} title="Vortex 360" tools="React.js" />
-                            <Card className="cardsItem" backImg={shoe} title="E-Store" tools="Vanilla js" />
-                            
+                <div id="education" ref={educationRef}>
+                    <div className="cover "></div>
+                    <div className=""></div>
+                    <div className="invisible">
+                        <h2>Education</h2>
+                        <div className="">
+                            <div className="education-entry">
+                                <h3>Bachelor of Science in Computer Science</h3>
+                                <p>
+                                    <strong>University:</strong> Vellore institute of technology
+                                </p>
+                                <p>
+                                    <strong>Location:</strong> Vellore, Tamil Nadu
+                                </p>
+                                <p>
+                                    <strong>Dates:</strong> September 2022 - 2026
+                                </p>
+                                {/* <p>
+                            <strong>GPA:</strong> 3.8/4.0
+                        </p> */}
+                                <p>
+                                    <strong>Relevant Coursework:</strong> Algorithms and Data Structures, Database Management Systems, Software Engineering, Computer Networks
+                                </p>
+                                <p>
+                                    <strong>Thesis:</strong> "Analysis of Machine Learning Algorithms for Sentiment Analysis"
+                                </p>
+                            </div>
+                            <div className="education-entry">
+                                <h3>High School Diploma</h3>
+                                <p>
+                                    <strong>School:</strong> XYZ High School
+                                </p>
+                                <p>
+                                    <strong>Location:</strong> City, State
+                                </p>
+                                <p>
+                                    <strong>Dates:</strong> September 2015 - May 2019
+                                </p>
+                                <p>
+                                    <strong>GPA:</strong> 4.0/4.0
+                                </p>
+                                <p>
+                                    <strong>Activities:</strong> President of Computer Science Club, Science Fair Participant
+                                </p>
+                            </div>
                         </div>
-                        
-                        <h3 onClick={toggleProjectLayover}>More...</h3>
                     </div>
                 </div>
-            </div>
 
-            <div id="contact" ref={contactRef}>
-                <h1>Contact Us</h1>
-            </div>
+                <div id="skills" ref={skillsRef}>
+                    <div className="cover "></div>
+                    <div className=""></div>
+                    <div className="invisible">
+                        <Skills />
+                    </div>
+                </div>
 
-            <div id="extra" ref={extraRef}>
-                <h1>Extra info</h1>
-            </div>
+                <div id="projects" ref={projectsRef}>
+                    <div className="cover "></div>
+                    <div className=""></div>
+                    <div className="invisible">
+                        <h1>Projects</h1>
+                        <div className="cards">
 
-            <Tiptool />
-        </main>
+                            <div id="html">
+
+                                <Card className="cardsItem" backImg={legal} title="Legally" tools="Next.js" />
+                                <Card className="cardsItem" backImg={vortex} title="Vortex 360" tools="React.js" />
+                                <Card className="cardsItem" backImg={shoe} title="E-Store" tools="Vanilla js" />
+
+                            </div>
+
+                            <h3 onClick={toggleProjectLayover}>More...</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="contact" ref={contactRef}>
+                    <div className="cover "></div>
+                    <div className=""></div>
+                    <h1>Contact Us</h1>
+                    <Contact />
+                </div>
+
+                <div id="extra" ref={extraRef}>
+                    <h1>Extra info</h1>
+                </div>
+
+                <Tiptool />
+            </main>
             {showProjectLayover && <ProjectLayover onClose={toggleProjectLayover} />} {/* Render ProjectLayover conditionally */}
-            </>
+        </>
     );
 };
 
