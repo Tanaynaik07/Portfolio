@@ -1,21 +1,14 @@
-main {
-    background: #5e0084;
-    overflow-y: hidden;
-}
-
-#prof_title:after {
-    content: "";
-    animation: spin 4s linear infinite;
-}
 
 
+@media only screen and (min-width: 769px) {
+    
 #intro {
     min-height: fit-content;
     display: flex;
     flex: 1;
     justify-content: start;
     padding-top: 10rem;
-    padding-left: 25%;
+    padding-left: 15%;
     margin-bottom: 10%;
     gap: 4rem;
 }
@@ -43,6 +36,18 @@ main {
     flex: 1;
     color: white;
 }
+
+main {
+    background: #5e0084;
+    overflow-y: hidden;
+}
+
+#prof_title:after {
+    content: "";
+    animation: spin 4s linear infinite;
+}
+
+
 
 #intro h1,
 #intro p {
@@ -269,7 +274,7 @@ main {
 #contact,
 #extra {
     position: relative;
-    z-index: 5;
+    z-index: 7;
 }
 
 
@@ -283,3 +288,5 @@ main {
     z-index: 3;
     
 }
+
+  }

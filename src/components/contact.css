@@ -1,0 +1,468 @@
+#contact1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+
+.tooltip-container-linkdine {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 17px;
+  border-radius: 10px;
+}
+
+.tooltip-linkdine {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  border-radius: 15px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.profile-linkdine {
+  background: #2a2b2f;
+  border-radius: 10px 15px;
+  padding: 10px;
+  border: 1px solid rgba(11, 63, 95, 1);
+}
+
+.tooltip-container-linkdine:hover .tooltip-linkdine {
+  top: -150px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.icon-linkdine {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  position: relative;
+}
+.layer-linkdine {
+  width: 55px;
+  height: 55px;
+  transition: transform 0.3s;
+}
+.icon-linkdine:hover .layer-linkdine {
+  transform: rotate(-35deg) skew(20deg);
+}
+.layer-linkdine span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.layer-linkdine span,
+.text-linkdine {
+  color: #1da1f2;
+  border-color: #1da1f2;
+}
+
+.icon-linkdine:hover.layer-linkdine span {
+  box-shadow: -1px 1px 3px #1da1f2;
+}
+.icon-linkdine .text-linkdine {
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  opacity: 0;
+  font-weight: 500;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+.icon-linkdine:hover .text-linkdine {
+  bottom: -35px;
+  opacity: 1;
+}
+
+.icon-linkdine:hover .layer-linkdine span:nth-child(1) {
+  opacity: 0.2;
+}
+.icon-linkdine:hover .layer-linkdine span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(5px, -5px);
+}
+.icon-linkdine:hover .layer-linkdine span:nth-child(3) {
+  opacity: 0.6;
+  transform: translate(10px, -10px);
+}
+.icon-linkdine:hover .layer-linkdine span:nth-child(4) {
+  opacity: 0.8;
+  transform: translate(15px, -15px);
+}
+.icon-linkdine:hover .layer-linkdine span:nth-child(5) {
+  opacity: 1;
+  transform: translate(20px, -20px);
+}
+
+.layer-linkdine span.fab {
+  font-size: 30px;
+  line-height: 64px;
+  text-align: center;
+  fill: #1da1f2;
+  background: #000;
+}
+.user-linkdine {
+  display: flex;
+  gap: 10px;
+}
+.img-linkdine {
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: 700;
+  border: 1px solid #1da1f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.name-linkdine {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1da1f2;
+}
+.details-linkdine {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  color: #fff;
+}
+.about-linkdine {
+  color: #ccc;
+  padding-top: 5px;
+}
+
+
+.tooltip-container-insta {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 17px;
+  border-radius: 10px;
+}
+
+.tooltip-insta {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  border-radius: 15px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.profile-insta {
+  background: #2a2b2f;
+  border-radius: 10px 15px;
+  padding: 10px;
+  border: 1px solid #52382f;
+}
+
+.tooltip-container-insta:hover .tooltip-insta {
+  top: -150px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.icon-insta {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  position: relative;
+}
+.layer-insta {
+  width: 55px;
+  height: 55px;
+  transition: transform 0.3s;
+}
+.icon-insta:hover .layer-insta {
+  transform: rotate(-35deg) skew(20deg);
+}
+.layer-insta span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+
+.layer-insta span,
+.text-insta {
+  color: #e6683c;
+  border-color: #e6683c;
+}
+
+.icon-insta:hover.layer-insta span {
+  box-shadow: -1px 1px 3px #e6683c;
+}
+.icon-insta .text-insta {
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  opacity: 0;
+  font-weight: 500;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+.icon-insta:hover .text-insta {
+  bottom: -35px;
+  opacity: 1;
+}
+
+.icon-insta:hover .layer-insta span:nth-child(1) {
+  opacity: 0.2;
+}
+.icon-insta:hover .layer-insta span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(5px, -5px);
+}
+.icon-insta:hover .layer-insta span:nth-child(3) {
+  opacity: 0.6;
+  transform: translate(10px, -10px);
+}
+.icon-insta:hover .layer-insta span:nth-child(4) {
+  opacity: 0.8;
+  transform: translate(15px, -15px);
+}
+.icon-insta:hover .layer-insta span:nth-child(5) {
+  opacity: 1;
+  transform: translate(20px, -20px);
+}
+
+.instagramSVG {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.user-insta {
+  display: flex;
+  gap: 10px;
+}
+.img-insta {
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: 700;
+  border: 1px solid #e6683c;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.name-insta {
+  font-size: 17px;
+  font-weight: 700;
+  color: #e6683c;
+}
+.details-insta {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  color: #fff;
+}
+.about-insta {
+  color: #ccc;
+  padding-top: 5px;
+}
+
+
+
+.tooltip-container-git {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 17px;
+  border-radius: 10px;
+}
+
+.tooltip-git {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  border-radius: 15px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.profile-git {
+  background: #2a2b2f;
+  border-radius: 10px 15px;
+  padding: 10px;
+  border: 1px solid #52382f;
+}
+
+.tooltip-container-git:hover .tooltip-git {
+  top: -150px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.icon-git {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  position: relative;
+}
+.layer-git {
+  width: 55px;
+  height: 55px;
+  transition: transform 0.3s;
+}
+.icon-git:hover .layer-git {
+  transform: rotate(-35deg) skew(20deg);
+}
+.layer-git span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+
+.layer-git span,
+.text-git {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.icon-git:hover.layer-git span {
+  box-shadow: -1px 1px 3px #e6683c;
+}
+.icon-git .text-git {
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  opacity: 0;
+  font-weight: 500;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+.icon-git:hover .text-git {
+  bottom: -35px;
+  opacity: 1;
+}
+
+.icon-git:hover .layer-git span:nth-child(1) {
+  opacity: 0.2;
+}
+.icon-git:hover .layer-git span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(5px, -5px);
+}
+.icon-git:hover .layer-git span:nth-child(3) {
+  opacity: 0.6;
+  transform: translate(10px, -10px);
+}
+.icon-git:hover .layer-git span:nth-child(4) {
+  opacity: 0.8;
+  transform: translate(15px, -15px);
+}
+.icon-git:hover .layer-git span:nth-child(5) {
+  opacity: 1;
+  transform: translate(20px, -20px);
+}
+
+.GitSVG {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: white;
+  
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.user-git {
+  display: flex;
+  gap: 10px;
+}
+.img-git {
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: 700;
+  border: 1px solid #e6683c;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.name-git {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.details-git {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  color: #fff;
+}
+.about-insta {
+  color: #ccc;
+  padding-top: 5px;
+}
