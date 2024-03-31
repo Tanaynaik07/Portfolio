@@ -79,6 +79,11 @@ const Landing = () => {
                             divs[0].classList.add("coverprojects");
                             divs[1].classList.add("coverheader", "aboutheader");
                             divs[2].classList.remove("invisible"); // Remove the invisible class from the outer div
+                            let innerdiv=divs[2].querySelectorAll('div');
+                            setTimeout(() => {
+                                console.log("This message will be logged after a 2-second delay.");
+                                innerdiv[0].classList.remove("invisible");
+                            }, 1500);
 
                             break;
 
@@ -207,15 +212,11 @@ const Landing = () => {
                         <img src={sampleImg} alt="Profile Img" />
                     </div>
                     <div id="text">
-                        <h1>Hi</h1>
-                        <br></br>
-                        <p>I am</p>
-                        <br />
-                        <h1>Tanay Naik</h1>
-                        <br />
-                        <p>& I am</p>
-                        <br />
-                        <h1 id="prof_title"></h1>
+                    <h1 style={{ color: "Cyan" }}>Tanay Naik</h1>
+                    <br></br>
+
+                        <p style={{ fontWeight:"400" }}>I'm a <br></br></p> <p id="jobs">Web developer || UI UX designer || Software developer </p>
+
                     </div>
                 </div>
 
@@ -287,13 +288,13 @@ const Landing = () => {
                     <div className=""></div>
                     <div className="invisible ">
                         <h1>Projects</h1>
-                        <div className="cards">
+                        <div className="cards invisible">
 
                             <div id="html">
 
                                 <Card className="cardsItem" backImg={legal} title="Legally" tools="Next.js" />
-                                <Card className="cardsItem" backImg={vortex} title="Vortex 360" tools="React.js" />
-                                <Card className="cardsItem" backImg={shoe} title="E-Store" tools="Vanilla js" />
+                                <Card className="cardsItem extraitem"  backImg={vortex} title="Vortex 360" tools="React.js" />
+                                <Card className="cardsItem extraitem"   backImg={shoe} title="E-Store" tools="Vanilla js" />
 
                             </div>
 

@@ -1,403 +1,478 @@
- 
+ #intro {
+     /* min-height: fit-content; */
+     display: flex;
+     flex: 1 1;
+     justify-content: start;
+     padding-top: -1rem;
+     /* padding-bottom: 43px; */
+     padding-left: 0%;
+     margin-bottom: 10%;
+     transform: translateY(-85px);
+     border-bottom: gold 4px solid;
+ }
 
-    #intro {
-        /* min-height: fit-content; */
-        display: flex;
-        flex: 1;
-        justify-content: start;
-        padding-top: 10rem;
-        padding-left: 15%;
-        margin-bottom: 10%;
-        gap: 4rem;
+ #intro img {
+     width: 63%;
+     height: auto;
+ }
+
+ #profilecover {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: transparent;
+     border-radius: 12%;
+     width: 51%;
+ }
+
+
+
+ #intro #text {
+     display: flex;
+     flex-direction: column;
+     font-size: x-large;
+     flex: 1;
+     color: white;
+     justify-content: center;
+ }
+
+ main {
+     background: #5e0084;
+     overflow-y: hidden;
+ }
+
+ #prof_title:after {
+     content: "";
+     animation: spin 4s linear infinite;
+ }
+
+
+
+ #intro h1,
+ #intro p {
+     margin: 0;
+ }
+
+ #aboutme,
+ #education,
+ #projects,
+ #contact,
+ #skills,
+ #extra {
+     flex-direction: column;
+     display: flex;
+     flex: 1;
+     padding: 0 11rem;
+     margin: 10rem 0;
+     color: white;
+     opacity: 0.8;
+     max-width: 78vw;
+ }
+
+ #aboutme {
+     font-size: 20px;
+     position: relative;
+     z-index: 1;
+     /* Ensure it's behind the cover */
+ }
+
+ .cover {
+
+     position: absolute;
+     background-color: #5e0084;
+     z-index: 1;
+     display: flex;
+     flex: 1;
+ }
+
+ .coveraboutme {
+     animation: coverAbout 2s cubic-bezier(0, 0.5, 0, 1) 0.9s forwards, coverborder 0.1ms 0.7s forwards;
+
+     z-index: 1;
+ }
+
+
+
+ .coverheader {
+     background-color: gold;
+     animation: magicLine 0.7s cubic-bezier(0.3, 0, 0.7, 1) forwards;
+     /* Add a delay of 10 seconds before starting the disappear animation */
+     height: 4px;
+     /* position: absolute; */
+
+ }
+
+ .aboutheader {
+     z-index: 2;
+ }
+
+ @keyframes coverAbout {
+     0% {
+         opacity: 1;
+         transform: translateY(0);
+     }
+
+     100% {
+         transform: translateY(100%);
+     }
+ }
+
+ @keyframes magicLine {
+     0% {
+         width: 0px;
+     }
+
+     100% {
+         width: 100%;
+     }
+ }
+
+ @keyframes disappear {
+     0% {
+         opacity: 1;
+     }
+
+     100% {
+         opacity: 1;
+     }
+ }
+
+ @keyframes coverborder {
+     0% {
+         border-top: 0;
+     }
+
+     100% {
+         border-top: gold 4px solid;
+     }
+
+ }
+
+ .invisible {
+     opacity: 0;
+ }
+
+
+ @keyframes comesvisible {
+     0% {
+         opacity: 0;
+     }
+
+     100% {
+         opacity: 1;
+     }
+ }
+
+
+ @keyframes spin {
+     0% {
+         content: "Web Developer";
+
+     }
+
+     33% {
+         content: "AI Developer";
+
+     }
+
+     66% {
+         content: "Data Analyst";
+
+     }
+
+     100% {
+         content: "Web Developer";
+
+     }
+ }
+
+
+ #education {
+     position: relative;
+     z-index: 2;
+ }
+
+
+
+ .covereducation {
+     animation: coverAbout 2.5s cubic-bezier(0, 0.5, 0, 1) 0.9s forwards, coverborder 0.1ms 0.7s forwards;
+     /* min-height: 80vh; */
+     z-index: 1;
+ }
+
+ .educationheader {
+     z-index: 2;
+ }
+
+ @keyframes coverEducation {
+     0% {
+         opacity: 1;
+         transform: translateY(0);
+     }
+
+     100% {
+         transform: translateY(100%);
+     }
+ }
+
+
+
+
+ #skills {
+     position: relative;
+     z-index: 4;
+ }
+
+ .coverskills {
+     animation: coverAbout 2s cubic-bezier(0, 0.5, 0, 1) 0.9s forwards, coverborder 0.1ms 0.7s forwards;
+     /* min-height: 50vh; */
+     z-index: 1;
+ }
+
+ .skillsheader {
+     z-index: 2;
+ }
+
+ @keyframes coverSkills {
+     0% {
+         opacity: 1;
+         transform: translateY(0);
+     }
+
+     100% {
+         transform: translateY(100%);
+     }
+ }
+
+
+ #projects {
+     position: relative;
+     z-index: 4;
+     overflow-y: hidden;
+ }
+
+ .coverprojects {
+     animation: coverAbout 2s cubic-bezier(0, 0.5, 0, 1) 0.9s forwards, coverborder 0.1ms 0.7s forwards;
+     /* min-height: 77vh; */
+     z-index: 1;
+ }
+
+ .projectsheader {
+     z-index: 2;
+ }
+
+ @keyframes coverProjects {
+     0% {
+         opacity: 1;
+         transform: translateY(0);
+     }
+
+     100% {
+         transform: translateY(100%);
+     }
+ }
+
+ .covercontact {
+     animation: coverAbout 2s cubic-bezier(0, 0.5, 0, 1) 0.9s forwards, coverborder 0.1ms 0.7s forwards;
+     /* min-height: 77vh; */
+     z-index: 1;
+ }
+
+ @keyframes coverContact {
+     0% {
+         opacity: 1;
+         transform: translateY(0);
+     }
+
+     100% {
+         transform: translateY(100%);
+     }
+ }
+
+ #contact,
+ #extra {
+     position: relative;
+     z-index: 7;
+ }
+
+
+
+
+ #html,
+ #react,
+ #next {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     /* 3 rows with equal height */
+     grid-auto-rows: auto;
+     grid-gap: 30% 10%;
+     /* Adjust the gap between grid items */
+     z-index: 3;
+
+ }
+
+
+ #more {
+     width: fit-content;
+ }
+
+ #more:hover {
+     color: #17C3B2;
+     cursor: grab;
+ }
+
+
+ .cards {
+     display: flex;
+     flex-direction: column;
+     align-items: space-around;
+     flex: 1;
+ }
+
+ .projectspecial {
+     display: flex;
+     flex-direction: column;
+ }
+
+
+ #html,
+ #react,
+ #next {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     /* Three columns with equal width */
+     grid-auto-rows: auto;
+     /* 3 rows with equal height */
+     grid-gap: 30% 10%;
+     /* Adjust the gap between grid items */
+     z-index: 3;
+ }
+
+ .blur {
+     filter: blur(5px);
+ }
+
+ *::-webkit-scrollbar {
+     display: none;
+     /* Hide scrollbar for WebKit (Chrome, Safari, etc.) */
+ }
+
+ #jobs {
+     text-shadow: 4px 5px 4px rgba(0, 0, 0, 1);
+ }
+
+ .extraitem {
+     display: contents;
+ }
+
+
+ @media screen and (max-width: 1200px) {
+
+     #html,
+     #react,
+     #next {
+         grid-template-columns: repeat(2, 1fr);
+         /* Two columns with equal width for smaller screens */
+     }
+ }
+
+ @media screen and (max-width: 768px) {
+
+     #html,
+     #react,
+     #next {
+         grid-template-columns: repeat(1, 1fr);
+         /* One column for even smaller screens */
+     }
+
+     #projects .invisible {
+         opacity: 1;
+     }
+
+     #aboutme,
+     #education,
+     #projects,
+     #contact,
+     #skills,
+     #extra {
+         flex-direction: column;
+         display: flex;
+         flex: 1;
+         padding: 0 8rem;
+         margin: 10rem 0;
+         color: white;
+         opacity: 0.8;
+         max-width: 78vw;
+     }
+
+     #intro {
+         transform: translate(0);
+         gap: 4rem;
+         flex-direction: column;
+         align-items: center;
+         padding: 0 3rem;
+
+         /* padding-bottom: 43px; */
+         /* padding-left: 0%; */
+         margin-bottom: 10%;
+         border: none;
+
+     }
+
+     #intro img {
+         border-bottom: gold 4px solid;
+         border-radius: 10px;
+         width: 113%;
+         height: auto;
+     }
+
+     #text {
+         text-align: center;
+     }
+
+     #text h1 {
+         font-size: 36px;
+     }
+
+     .extraitem {
+         display: none;
+     }
+
+     #holder {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+ }
+
+ @media screen and (max-width: 480px) {
+
+     #holder {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+
+     #text h1 {
+        font-size: 16px;
     }
-
-    #intro img {
-        width: 100%;
-        height: 30rem;
-    }
-
-    #profilecover {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: transparent;
-        border-radius: 12%;
-        background: linear-gradient(rgb(255 255 255 / 33%), rgba(0, 0, 0, 0.33));
-    }
-    
-  
-
-    #intro #text {
-        display: flex;
-        flex-direction: column;
-        padding-top: 4rem;
-        flex: 1;
-        color: white;
-    }
-
-    main {
-        background: #5e0084;
-        overflow-y: hidden;
-    }
-
-    #prof_title:after {
-        content: "";
-        animation: spin 4s linear infinite;
-    }
-
-
-
-    #intro h1,
-    #intro p {
-        margin: 0;
-    }
-
-    #aboutme,
-    #education,
-    #projects,
-    #contact,
-    #skills,
-    #extra {
-        flex-direction: column;
-        display: flex;
-        flex: 1;
-        padding: 0 11rem;
-        margin: 10rem 0;
-        color: white;
-        opacity: 0.8;
-        max-width: 78vw;
-    }
-
-    #aboutme {
-        font-size: 20px;
-        position: relative;
-        z-index: 1;
-        /* Ensure it's behind the cover */
-    }
-
-    .cover {
-
-        position: absolute;
-        background-color: #5e0084;
-        z-index: 1;
-        display: flex;
-        flex: 1;
-    }
-
-    .coveraboutme {
-        animation: coverAbout 2s cubic-bezier(0, 0.5, 0, 1) 0.9s forwards, coverborder 0.1ms 0.7s forwards;
-
-        z-index: 1;
-    }
-
-
-
-    .coverheader {
-        background-color: gold;
-        animation: magicLine 0.7s cubic-bezier(0.3, 0, 0.7, 1) forwards;
-        /* Add a delay of 10 seconds before starting the disappear animation */
-        height: 4px;
-        /* position: absolute; */
-
-    }
-
-    .aboutheader {
-        z-index: 2;
-    }
-
-    @keyframes coverAbout {
-        0% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        100% {
-            transform: translateY(100%);
-        }
-    }
-
-    @keyframes magicLine {
-        0% {
-            width: 0px;
-        }
-
-        100% {
-            width: 100%;
-        }
-    }
-
-    @keyframes disappear {
-        0% {
-            opacity: 1;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @keyframes coverborder {
-        0% {
-            border-top: 0;
-        }
-
-        100% {
-            border-top: gold 4px solid;
-        }
-
-    }
-
-    .invisible {
-        opacity: 0;
-    }
-
-
-    @keyframes comesvisible {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-
-    @keyframes spin {
-        0% {
-            content: "Web Developer";
-
-        }
-
-        33% {
-            content: "AI Developer";
-
-        }
-
-        66% {
-            content: "Data Analyst";
-
-        }
-
-        100% {
-            content: "Web Developer";
-
-        }
-    }
-
-
-    #education {
-        position: relative;
-        z-index: 2;
-    }
-
-
-
-    .covereducation {
-        animation: coverAbout 2.5s cubic-bezier(0, 0.5, 0, 1) 0.9s forwards, coverborder 0.1ms 0.7s forwards;
-        /* min-height: 80vh; */
-        z-index: 1;
-    }
-
-    .educationheader {
-        z-index: 2;
-    }
-
-    @keyframes coverEducation {
-        0% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        100% {
-            transform: translateY(100%);
-        }
-    }
-
-
-
-
-    #skills {
-        position: relative;
-        z-index: 4;
-    }
-
-    .coverskills {
-        animation: coverAbout 2s cubic-bezier(0, 0.5, 0, 1) 0.9s forwards, coverborder 0.1ms 0.7s forwards;
-        /* min-height: 50vh; */
-        z-index: 1;
-    }
-
-    .skillsheader {
-        z-index: 2;
-    }
-
-    @keyframes coverSkills {
-        0% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        100% {
-            transform: translateY(100%);
-        }
-    }
-
-
-    #projects {
-        position: relative;
-        z-index: 4;
-        overflow-y: hidden;
-    }
-
-    .coverprojects {
-        animation: coverAbout 2s cubic-bezier(0, 0.5, 0, 1) 0.9s forwards, coverborder 0.1ms 0.7s forwards;
-        /* min-height: 77vh; */
-        z-index: 1;
-    }
-
-    .projectsheader {
-        z-index: 2;
-    }
-
-    @keyframes coverProjects {
-        0% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        100% {
-            transform: translateY(100%);
-        }
-    }
-
-    .covercontact {
-        animation: coverAbout 2s cubic-bezier(0, 0.5, 0, 1) 0.9s forwards, coverborder 0.1ms 0.7s forwards;
-        /* min-height: 77vh; */
-        z-index: 1;
-    }
-
-    @keyframes coverContact {
-        0% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        100% {
-            transform: translateY(100%);
-        }
-    }
-
-    #contact,
-    #extra {
-        position: relative;
-        z-index: 7;
-    }
-
-
-
-
-    #html,
-    #react,
-    #next {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        /* 3 rows with equal height */
-        grid-auto-rows: auto;
-        grid-gap: 30% 10%;
-        /* Adjust the gap between grid items */
-        z-index: 3;
-
-    }
-
-
-    #more{
-        width: fit-content;
-    }
-    #more:hover {
-        color: #17C3B2;
-        cursor: grab;
-    }
-
-
-    .cards{
-        display: flex;
-        flex-direction: column;
-        align-items: space-around;
-        flex: 1;
-    }
-
-    .projectspecial{
-        display: flex;
-        flex-direction: column;
-    }
-
-
-    #html,
-#react,
-#next {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
-    grid-auto-rows: auto; /* 3 rows with equal height */
-    grid-gap: 30% 10%; /* Adjust the gap between grid items */
-    z-index: 3;
-}
-
-.blur{
-    filter: blur(5px);
-}
-
-*::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for WebKit (Chrome, Safari, etc.) */
-}
-
-@media screen and (max-width: 1200px) {
-    #html,
-    #react,
-    #next {
-        grid-template-columns: repeat(2, 1fr); /* Two columns with equal width for smaller screens */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    #html,
-    #react,
-    #next {
-        grid-template-columns: repeat(1, 1fr); /* One column for even smaller screens */
-    }
-
-    #aboutme,
-    #education,
-    #projects,
-    #contact,
-    #skills,
-    #extra {
-        flex-direction: column;
-        display: flex;
-        flex: 1;
-        padding: 0 8rem;
-        margin: 10rem 0;
-        color: white;
-        opacity: 0.8;
-        max-width: 78vw;
-    }
-
-}
-
-@media screen and (max-width: 480px){
-    #aboutme,
-    #education,
-    #projects,
-    #contact,
-    #skills,
-    #extra {
-        flex-direction: column;
-        display: flex;
-        flex: 1;
-        padding: 0 3rem;
-        margin: 10rem 0;
-        color: white;
-        opacity: 0.8;
-        max-width: 78vw;
-    }
+     #aboutme,
+     #education,
+     #projects,
+     #contact,
+     #skills,
+     #extra {
+         flex-direction: column;
+         display: flex;
+         flex: 1;
+         padding: 0 3rem;
+         margin: 10rem 0;
+         color: white;
+         opacity: 0.8;
+         max-width: 78vw;
+     }
+
+     .extraitem {
+         display: none;
+     }
  }
