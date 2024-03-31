@@ -90,18 +90,15 @@ const Skills = () => {
             </div> */}
 
            
-                <ul><li>Programming Languages: Java, Python, C++</li>
-                <li>Web Development: HTML, CSS, JavaScript</li>
-                <li>Frameworks/Libraries: React.js, Node.js, Django</li>
-                <li>Database Management: SQL, MongoDB</li>
+                <ul><li>Programming Languages: Python, C, C++, C#, Java, JavaScript etc.</li>
+                <li> Designing Tools: Figma, Canva, Blender  </li>
+                <li> Frameworks/Libraries: React.js, Node.js</li>
+                <li>Web Development: HTML, CSS, JavaScript, Express.js</li>
                 <li>Version Control: Git</li>
-                <li>Software Development Tools: Visual Studio Code, IntelliJ IDEA</li>
-                <li>Operating Systems: Windows, Linux</li>
-                <li>Problem Solving: Data Structures, Algorithms</li>
-                <li>Networking: TCP/IP, OSI Model</li>
-                <li>Machine Learning: TensorFlow, Scikit-learn</li>
-                <li>Cloud Computing: AWS, Azure</li>
-                <li>Agile Methodologies: Scrum, Kanban</li>
+                <li>Software Development Tools: Visual Studio Code </li>
+                 
+                <li>Problem Solving: Technical Analysis, Code Debugging, Analytical thinking, Functionality implementation</li>
+                
             </ul> 
         </>
     )

@@ -4,6 +4,8 @@
     display: flex;
     justify-content: flex-start;
     padding-right: 170px;
+    position: relative;
+    z-index: 1000;
   }
   .item-hints .hint {
     margin:  1rem 4rem;
