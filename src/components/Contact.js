@@ -4,6 +4,10 @@ import "../components/contact.css"
 
 const Contact = () => {
   return (
+
+    <div>
+
+    
     <div id="contact1">
 
       <div class="tooltip-container-linkdine">
@@ -110,7 +114,10 @@ const Contact = () => {
       </div>
 
 
+
     </div>
+    </div>
+
   );
 };
 

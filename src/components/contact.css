@@ -41,6 +41,7 @@
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  z-index: 100;
 }
 
 .icon-linkdine {
@@ -157,6 +158,7 @@
   transition: all 0.2s;
   font-size: 17px;
   border-radius: 10px;
+  z-index: 100;
 }
 
 .tooltip-insta {
@@ -319,6 +321,7 @@
   transition: all 0.2s;
   font-size: 17px;
   border-radius: 10px;
+  z-index: 100;
 }
 
 .tooltip-git {
