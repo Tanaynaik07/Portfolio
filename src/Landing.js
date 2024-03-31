@@ -292,9 +292,9 @@ const Landing = () => {
 
                             <div id="html">
 
-                                <Card className="cardsItem" backImg={legal} title="Legally" tools="Next.js" />
-                                <Card className="cardsItem extraitem"  backImg={vortex} title="Vortex 360" tools="React.js" />
-                                <Card className="cardsItem extraitem"   backImg={shoe} title="E-Store" tools="Vanilla js" />
+                                <Card className="cardsItem" backImg={legal} title="Legally" tools="Next.js" link="https://legally-three.vercel.app/"/>
+                                <Card className="cardsItem extraitem"  backImg={vortex} title="Vortex 360" tools="React.js" link="https://enchanting-swan-8e8d4b.netlify.app/" />
+                                <Card className="cardsItem extraitem"   backImg={shoe} title="E-Store" tools="Vanilla js" link="shoe-store-six-puce.vercel.app" />
 
                             </div>
 

@@ -14,12 +14,13 @@ const ProjectLayover = ({ onClose }) => {
         <div className="project-layover">
             <div className="project-grid">
                 {/* Example cards */}
-                <Card className="cardsItem" backImg={legal} title="Legally" tools="Next.js" />
-                <Card className="cardsItem" backImg={vortex} title="Vortex 360" tools="React.js" />
-                <Card className="cardsItem" backImg={shoe} title="E-Store" tools="Vanilla js" />
-                <Card backImg={robo} title="Robowars" tools="Vanilla js" />
-                <Card backImg={book} title="Writing" tools="Vanilla js" />
-                <Card backImg={todo} title="Todo" tools="Vanilla js" />
+                <Card className="cardsItem" backImg={legal} title="Legally" tools="Next.js" link="https://legally-three.vercel.app/" />
+                <Card className="cardsItem extraitem" backImg={vortex} title="Vortex 360" tools="React.js" link="https://enchanting-swan-8e8d4b.netlify.app/" />
+                <Card className="cardsItem extraitem" backImg={shoe} title="E-Store" tools="Vanilla js" link="shoe-store-six-puce.vercel.app" />
+
+                <Card backImg={robo} title="Robowars" tools="Vanilla js" link="https://robo-war-clone.vercel.app/"/>
+                <Card backImg={book} title="Writing" tools="Vanilla js" link="https://writing-rho.vercel.app/" />
+                <Card backImg={todo} title="Todo" tools="Vanilla js" link="https://todo-eight-mu.vercel.app/" />
 
                 {/* Add more cards as needed */}
             </div>
