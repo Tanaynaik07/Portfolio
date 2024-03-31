@@ -10,6 +10,7 @@ import Tiptool from "./components/Tiptool";
 import Skills from "./components/Skills";
 import ProjectLayover from "../src/components/PorjectLayover"; // Import the ProjectLayover component
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 
 const Landing = () => {
@@ -309,6 +310,7 @@ const Landing = () => {
                 </div> */}
 
                 <Tiptool description="Having trouble? you can always connect via email" />
+                <Footer/>
             </main>
             {showProjectLayover && <ProjectLayover onClose={toggleProjectLayover} />} {/* Render ProjectLayover conditionally */}
         </>

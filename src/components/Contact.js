@@ -14,13 +14,13 @@ const Contact = () => {
         <div class="tooltip-linkdine">
           <div class="profile-linkdine">
             <div class="user-linkdine">
-              <div class="img-linkdine">Ui</div>
+               
               <div class="details-linkdine">
-                <div class="name-linkdine">User</div>
-                <div class="username-linkdine">@username</div>
+                <div class="name-linkdine">Tanay</div>
+                <div class="username-linkdine">@Tanay Naik</div>
               </div>
             </div>
-            <div class="about-linkdine">500+ Connections</div>
+            <div class="about-linkdine">200+ Connections</div>
           </div>
         </div>
         <div class="text-linkdine">
@@ -49,13 +49,13 @@ const Contact = () => {
         <div class="tooltip-insta">
           <div class="profile-insta">
             <div class="user-insta">
-              <div class="img-insta">Ui</div>
+               
               <div class="details-insta">
-                <div class="name-insta">User</div>
-                <div class="username-insta">@username</div>
+                <div class="name-insta">Tanay</div>
+                <div class="username-insta">@tanay_n_7</div>
               </div>
             </div>
-            <div class="about-insta">800+ Followers</div>
+            <div class="about-insta">400+ Followers</div>
           </div>
         </div>
         <div class="text-insta">
@@ -88,13 +88,13 @@ const Contact = () => {
         <div class="tooltip-git">
           <div class="profile-git">
             <div class="user-git">
-              <div class="img-git">Ui</div>
+          
               <div class="details-git">
-                <div class="name-git">User</div>
-                <div class="username-git">@username</div>
+                <div class="name-git">Tanay</div>
+                <div class="username-git">@Tanaynaik07</div>
               </div>
             </div>
-            <div class="about-git">800+ Followers</div>
+        
           </div>
         </div>
         <div class="text-git">
