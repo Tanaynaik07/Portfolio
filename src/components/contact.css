@@ -5,7 +5,9 @@
   gap: 2rem;
 }
 
-
+.username-linkdine{
+  font-size: small;
+}
 .tooltip-container-linkdine {
   position: relative;
   cursor: pointer;
@@ -158,7 +160,7 @@
   transition: all 0.2s;
   font-size: 17px;
   border-radius: 10px;
-  z-index: 100;
+
 }
 
 .tooltip-insta {
@@ -188,6 +190,7 @@
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  z-index: 100;
 }
 
 .icon-insta {
@@ -321,7 +324,7 @@
   transition: all 0.2s;
   font-size: 17px;
   border-radius: 10px;
-  z-index: 100;
+ 
 }
 
 .tooltip-git {
@@ -351,6 +354,7 @@
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  z-index: 100;
 }
 
 .icon-git {

@@ -247,6 +247,7 @@
     #projects {
         position: relative;
         z-index: 4;
+        overflow-y: hidden;
     }
 
     .coverprojects {
@@ -364,6 +365,39 @@
     #next {
         grid-template-columns: repeat(1, 1fr); /* One column for even smaller screens */
     }
+
+    #aboutme,
+    #education,
+    #projects,
+    #contact,
+    #skills,
+    #extra {
+        flex-direction: column;
+        display: flex;
+        flex: 1;
+        padding: 0 8rem;
+        margin: 10rem 0;
+        color: white;
+        opacity: 0.8;
+        max-width: 78vw;
+    }
+
 }
 
- 
+@media screen and (max-width: 480px){
+    #aboutme,
+    #education,
+    #projects,
+    #contact,
+    #skills,
+    #extra {
+        flex-direction: column;
+        display: flex;
+        flex: 1;
+        padding: 0 3rem;
+        margin: 10rem 0;
+        color: white;
+        opacity: 0.8;
+        max-width: 78vw;
+    }
+ }

@@ -10,6 +10,9 @@ import Tiptool from "./components/Tiptool";
 import Skills from "./components/Skills";
 import ProjectLayover from "../src/components/PorjectLayover"; // Import the ProjectLayover component
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Canvas from "./components/Canva";
 
 
 const Landing = () => {
@@ -197,6 +200,8 @@ const Landing = () => {
     return (
         <>
             <main style={{ overflow: showProjectLayover ? 'hidden' : 'auto' }} id="main">
+                <Navbar/>
+                {/* <Canvas/> */}
                 <div id="intro" ref={introRef}>
                     <div id="profilecover">
                         <img src={sampleImg} alt="Profile Img" />
@@ -309,6 +314,7 @@ const Landing = () => {
                 </div> */}
 
                 <Tiptool description="Having trouble? you can always connect via email" />
+                <Footer/>
             </main>
             {showProjectLayover && <ProjectLayover onClose={toggleProjectLayover} />} {/* Render ProjectLayover conditionally */}
         </>
