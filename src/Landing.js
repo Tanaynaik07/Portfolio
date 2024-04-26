@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../src/landing.css";
-import sampleImg from "../src/assest/profile.png";
+import sampleImg from "../src/assest/profile1.png";
 import samplebg from "../src/assest/background.jpeg";
 import legal from "../src/assest/legal.jpeg";
 import vortex from "../src/assest/Vortex_360_logo.png";
@@ -294,7 +294,7 @@ const Landing = () => {
 
                                 <Card className="cardsItem" backImg={legal} title="Legally" tools="Next.js" link="https://legally-three.vercel.app/"/>
                                 <Card className="cardsItem extraitem"  backImg={vortex} title="Vortex 360" tools="React.js" link="https://enchanting-swan-8e8d4b.netlify.app/" />
-                                <Card className="cardsItem extraitem"   backImg={shoe} title="E-Store" tools="Vanilla js" link="shoe-store-six-puce.vercel.app" />
+                                <Card className="cardsItem extraitem"   backImg={shoe} title="E-Store" tools="Vanilla js" link="https://shoe-store-six-puce.vercel.app/" />
 
                             </div>
 
