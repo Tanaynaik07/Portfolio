@@ -41,9 +41,6 @@ const Education = () => {
                             <strong>Dates:</strong> September 2015 - May 2019
                         </p>
                         <p>
-                            <strong>GPA:</strong> 4.0/4.0
-                        </p>
-                        <p>
                             <strong>Activities:</strong> President of Computer Science Club, Science Fair Participant
                         </p>
                     </div>

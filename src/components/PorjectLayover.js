@@ -8,17 +8,20 @@ import soon from "../assest/soon.png";
 import legal from "../assest/legal.jpeg";
 import vortex from "../assest/Vortex_360_logo.png";
 import shoe from "../assest/shoe.jpg";
-
+import cab from "../assest/cab.png";
+import tic from "../assest/tic.png";
 const ProjectLayover = ({ onClose }) => {
     return (
         <div className="project-layover">
             <div className="project-grid">
                 {/* Example cards */}
+                <Card backImg={tic} title="Tic-Tac-Toe" tools="React Js" link="https://tic-toc-toe-nine.vercel.app/single-player"/>
                 <Card className="cardsItem" backImg={legal} title="Legally" tools="Next.js" link="https://legally-three.vercel.app/" />
                 <Card className="cardsItem extraitem" backImg={vortex} title="Vortex 360" tools="React.js" link="https://enchanting-swan-8e8d4b.netlify.app/" />
                 <Card className="cardsItem extraitem" backImg={shoe} title="E-Store" tools="Vanilla js" link="shoe-store-six-puce.vercel.app" />
+                <Card backImg={cab} title="Cab-booking" tools="React Js" link="https://cab-book-two.vercel.app/" />
 
-                <Card backImg={robo} title="Robowars" tools="Vanilla js" link="https://robo-war-clone.vercel.app/"/>
+                <Card backImg={robo} title="Robowars" tools="Vanilla js" link="https://robo-war-clone.vercel.app/" />
                 <Card backImg={book} title="Writing" tools="Vanilla js" link="https://writing-rho.vercel.app/" />
                 <Card backImg={todo} title="Todo" tools="Vanilla js" link="https://todo-eight-mu.vercel.app/" />
 
