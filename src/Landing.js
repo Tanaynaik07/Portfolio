@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../src/landing.css";
-import sampleImg from "../src/assest/profile1.png";
+import sampleImg from "../src/assest/profile2.png";
 import samplebg from "../src/assest/background.jpeg";
 import legal from "../src/assest/legal.jpeg";
 import vortex from "../src/assest/Vortex_360_logo.png";
@@ -266,9 +266,9 @@ const Landing = () => {
                                 <p>
                                     <strong>Dates:</strong>2018 - 2022
                                 </p>
-                                <p>
+                                {/* <p>
                                     <strong>GPA:</strong> 4.0/4.0
-                                </p>
+                                </p> */}
                                 
                             </div>
                         </div>

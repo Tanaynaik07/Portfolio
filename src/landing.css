@@ -12,8 +12,7 @@
  }
 
  #intro img {
-     width: 63%;
-     height: auto;
+     height: 70%;
  }
 
  #profilecover {
@@ -23,6 +22,10 @@
      background-color: transparent;
      border-radius: 12%;
      width: 51%;
+ }
+
+ #profilecover img{
+    
  }
 
 
