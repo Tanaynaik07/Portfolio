@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../src/landing.css";
-import sampleImg from "../src/assest/profile2.png";
+import sampleImg from "../src/assest/profile1.png";
 import samplebg from "../src/assest/background.jpeg";
 import legal from "../src/assest/legal.jpeg";
 import vortex from "../src/assest/Vortex_360_logo.png";
