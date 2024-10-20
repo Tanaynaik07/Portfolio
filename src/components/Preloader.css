@@ -1,0 +1,60 @@
+/* Full-screen black background for the preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 9, 185); /* Keep this for initial load */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    opacity: 1; /* Fully visible initially */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+/* Line starting from the center of the screen */
+.center-line {
+    position: relative;
+    height: 1px;
+    width: 0;
+    background-color: rgb(255, 255, 255);
+    animation: expandLine 1s forwards, openScreen 1.5s 1s forwards;
+}
+
+/* Keyframe animation to expand the line horizontally */
+@keyframes expandLine {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        width: 100vw; /* Expands to cover the width of the screen */
+    }
+}
+
+/* Keyframe animation to open up the screen with fade-out */
+@keyframes openScreen {
+    0% {
+        height: 1px;
+        opacity: 1; /* Fully visible at the start */
+    }
+    100% {
+        height: 100vh; /* Expands to cover the height of the screen */
+        opacity: 0; /* Fades out to transparent */
+    }
+}
+
+/* Main content styling */
+.main-content {
+    background-color: rgba(255, 255, 255, 0.9); /* Background for main content */
+    transition: opacity 0.5s ease; /* Smooth transition for main content */
+    opacity: 0; /* Initially hidden */
+}
+
+.reveal {
+    opacity: 1; /* Show main content after preloader */
+}

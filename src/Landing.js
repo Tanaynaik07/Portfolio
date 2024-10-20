@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../src/landing.css";
-import sampleImg from "../src/assest/profile1.png";
+import sampleImg from "../src/assest/screens1.png";
 import samplebg from "../src/assest/background.jpeg";
 import legal from "../src/assest/legal.jpeg";
 import vortex from "../src/assest/Vortex_360_logo.png";
@@ -13,9 +13,11 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Canvas from "./components/Canva";
+import Preloader from "./components/Preloader";
 
 
 const Landing = () => {
+    
     let lorem =
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions";
     let aboutMe = `
@@ -36,6 +38,7 @@ const Landing = () => {
 
     const [showProjectLayover, setShowProjectLayover] = useState(false); // State to control the visibility of the ProjectLayover
 
+    
     useEffect(() => {
         // Callback function to handle intersection changes
         function handleIntersection(entries, observer) {
@@ -202,20 +205,45 @@ const Landing = () => {
     }, []);
 
 
+    const [prof, setProf] = useState(""); // Current displayed string
+  const profession = " Web Developer || UI UX Designer || Software Developer"; // Full string
+
+  useEffect(() => {
+    let charIndex = 0; // Index to track the current character being typed
+
+    const runTypingEffect = () => {
+      if (charIndex < profession.length-1) {
+        setProf((prev) => prev + profession[charIndex]); // Add the next character
+        charIndex++; // Move to the next character
+      } else {
+        clearInterval(typingInterval); // Stop typing when the string is fully typed
+      }
+    };
+
+    // Start the typing effect (adding one character every 100ms)
+    const typingInterval = setInterval(runTypingEffect, 100);
+
+    // Cleanup the interval when the component unmounts
+    return () => clearInterval(typingInterval);
+  }, [profession]); // Run the effect only once when the component mounts
+
+
     return (
-        <>
+        <><link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Prociono&display=swap" rel="stylesheet"/>
+
+        {/* <Preloader/> */}
             <main style={{ overflow: showProjectLayover ? 'hidden' : 'auto' }} id="main">
                 <Navbar/>
                 {/* <Canvas/> */}
                 <div id="intro" ref={introRef}>
-                    <div id="profilecover">
-                        <img src={sampleImg} alt="Profile Img" />
-                    </div>
+                     
                     <div id="text">
-                    <h1 style={{ color: "Cyan" }}>Tanay Naik</h1>
+                   
                     <br></br>
 
-                        <p style={{ fontWeight:"400" }}>I'm a <br></br></p> <p id="jobs">Web developer || UI UX designer || Software developer </p>
+                        <p style={{ fontWeight:"400",textAlign:"left"}} className="prociono-regular">I'm a your ideal </p> <p id="jobs">{prof}</p>
 
                     </div>
                 </div>

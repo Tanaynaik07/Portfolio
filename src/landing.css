@@ -3,7 +3,7 @@
      display: flex;
      flex: 1 1;
      justify-content: start;
-     padding-top: -1rem;
+     padding-top: 4rem;
      /* padding-bottom: 43px; */
      padding-left: 0%;
      margin-bottom: 10%;
@@ -31,12 +31,14 @@
 
 
  #intro #text {
-     display: flex;
-     flex-direction: column;
-     font-size: x-large;
-     flex: 1;
-     color: white;
-     justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: x-large;
+    flex: 1 1;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
  }
 
  main {
@@ -378,9 +380,17 @@
          grid-template-columns: repeat(2, 1fr);
          /* Two columns with equal width for smaller screens */
      }
+     #intro #text {
+         
+        font-size: 2.5rem;
+     }
  }
 
  @media screen and (max-width: 768px) {
+    #intro #text {
+         
+        font-size: 2rem;
+     }
 
      #html,
      #react,
@@ -450,7 +460,10 @@
  }
 
  @media screen and (max-width: 480px) {
-
+    #intro #text {
+         
+        font-size: 1rem;
+     }
      #holder {
          display: flex;
          flex-direction: column;
@@ -480,3 +493,10 @@
          display: none;
      }
  }
+
+ .prociono-regular {
+    font-family: "Prociono", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  

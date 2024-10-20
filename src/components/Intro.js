@@ -5,9 +5,7 @@ import sampleImg from "../assest/profile.png";
 const Intro = () => {
     return (
         <div id="intro">
-            <div id="profilecover">
-                <img src={sampleImg} alt="Profile Img"></img>
-            </div>
+             
             <div id="text">
                 <p>I am</p>
                 <br></br>
